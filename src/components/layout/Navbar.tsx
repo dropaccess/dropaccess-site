@@ -26,14 +26,12 @@ export default function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <a
-              href={LINKS.buy}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/swap"
               className="px-4 py-2 rounded-lg bg-primary hover:bg-primary-dark text-white text-sm font-medium transition-colors"
             >
               Buy DROPA
-            </a>
+            </Link>
           </div>
 
           {/* Mobile toggle */}
@@ -67,14 +65,13 @@ export default function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <a
-              href={LINKS.buy}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/swap"
+              onClick={() => setOpen(false)}
               className="block px-4 py-2 rounded-lg bg-primary text-white text-sm font-medium text-center"
             >
               Buy DROPA
-            </a>
+            </Link>
           </div>
         </div>
       )}

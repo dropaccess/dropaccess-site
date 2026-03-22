@@ -13,7 +13,7 @@ export const LINKS = {
   discord: "https://discord.gg/dropaccess",
   medium: "https://medium.com/@dropaccess",
   github: "https://github.com/RAYANZIBARI/dropaccess-site",
-  buy: "https://jup.ag/swap/SOL-DROPA",
+  buy: `https://jup.ag/swap/SOL-${TOKEN.mintAddress}`,
   solscan: `https://solscan.io/token/${TOKEN.mintAddress}`,
 };
 
@@ -24,4 +24,5 @@ export const NAV_ITEMS = [
   { label: "About", href: "/about" },
   { label: "Docs", href: "/docs" },
   { label: "How to Buy", href: "/how-to-buy" },
+  { label: "Swap", href: "/swap" },
 ];
