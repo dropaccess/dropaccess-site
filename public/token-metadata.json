@@ -1,0 +1,11 @@
+{
+  "name": "DropAccess",
+  "symbol": "DROPA",
+  "description": "DropAccess is a Solana utility token that unlocks exclusive dropshipping resources, vetted suppliers, tools, and a global entrepreneur community.",
+  "image": "https://dropa.dev/images/logo.png",
+  "external_url": "https://dropa.dev",
+  "properties": {
+    "category": "utility",
+    "creators": []
+  }
+}
