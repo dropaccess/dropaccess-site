@@ -1,0 +1,27 @@
+export const TOKEN = {
+  name: "DropAccess",
+  symbol: "DROPA",
+  decimals: 9,
+  totalSupply: "1,000,000,000",
+  mintAddress: "YOUR_MINT_ADDRESS_HERE",
+  network: "Solana",
+};
+
+export const LINKS = {
+  twitter: "https://twitter.com/DropAccessToken",
+  telegram: "https://t.me/DropAccessOfficial",
+  discord: "https://discord.gg/dropaccess",
+  medium: "https://medium.com/@dropaccess",
+  github: "https://github.com/dropaccess",
+  buy: "https://jup.ag/swap/SOL-DROPA",
+  solscan: `https://solscan.io/token/${TOKEN.mintAddress}`,
+};
+
+export const NAV_ITEMS = [
+  { label: "Home", href: "/" },
+  { label: "Tokenomics", href: "/tokenomics" },
+  { label: "Roadmap", href: "/roadmap" },
+  { label: "About", href: "/about" },
+  { label: "Docs", href: "/docs" },
+  { label: "How to Buy", href: "/how-to-buy" },
+];

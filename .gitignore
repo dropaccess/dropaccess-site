@@ -1,0 +1,9 @@
+node_modules/
+.next/
+out/
+*.json.bak
+dropaccess-wallet.json
+*.pem
+.env
+.env.local
+.vercel
