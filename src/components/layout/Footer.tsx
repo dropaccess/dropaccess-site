@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { TOKEN, LINKS, NAV_ITEMS } from "@/lib/constants";
 
 export default function Footer() {
@@ -8,7 +9,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <span className="text-xl font-bold gradient-text">{TOKEN.name}</span>
+            <div className="flex items-center gap-2">
+              <Image src="/images/logo.png" alt={TOKEN.name} width={28} height={28} className="rounded-full" />
+              <span className="text-xl font-bold gradient-text">{TOKEN.name}</span>
+            </div>
             <p className="mt-3 text-gray-400 text-sm max-w-md">
               Bridging cryptocurrency and e-commerce. Hold DROPA to unlock exclusive
               dropshipping resources, tools, and a global community of entrepreneurs.

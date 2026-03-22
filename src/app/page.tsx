@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { TOKEN, LINKS } from "@/lib/constants";
 import CopyAddress from "@/components/shared/CopyAddress";
 
@@ -56,6 +57,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-transparent" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
           <div className="text-center max-w-3xl mx-auto">
+            <Image src="/images/logo.png" alt="DropAccess" width={80} height={80} className="rounded-full mx-auto mb-6" />
             <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary-light text-sm font-medium mb-6">
               Built on Solana
             </div>
