@@ -13,7 +13,7 @@ export const LINKS = {
   discord: "https://discord.gg/dropaccess",
   medium: "https://medium.com/@dropaccess",
   github: "https://github.com/dropaccess/dropaccess-site",
-  buy: `https://jup.ag/swap/SOL-${TOKEN.mintAddress}`,
+  buy: `https://raydium.io/swap/?inputMint=sol&outputMint=${TOKEN.mintAddress}`,
   solscan: `https://solscan.io/token/${TOKEN.mintAddress}`,
 };
 

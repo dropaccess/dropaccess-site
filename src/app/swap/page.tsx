@@ -3,11 +3,13 @@
 import { TOKEN, LINKS } from "@/lib/constants";
 import CopyAddress from "@/components/shared/CopyAddress";
 
+const RAYDIUM_SWAP_URL = `https://raydium.io/swap/?inputMint=sol&outputMint=${TOKEN.mintAddress}`;
+
 const SWAP_STEPS = [
   {
     step: "1",
     title: "Connect Wallet",
-    description: "Click the Jupiter widget below and connect your Phantom or Solflare wallet.",
+    description: "Click the Raydium swap below and connect your Phantom or Solflare wallet.",
   },
   {
     step: "2",
@@ -29,7 +31,7 @@ export default function SwapPage() {
           Swap for <span className="gradient-text">DROPA</span>
         </h1>
         <p className="mt-4 text-gray-400 max-w-xl mx-auto">
-          Buy {TOKEN.symbol} tokens directly using Jupiter, the leading Solana DEX aggregator.
+          Buy {TOKEN.symbol} tokens directly on Raydium, Solana&apos;s leading decentralized exchange.
         </p>
       </div>
 
@@ -39,33 +41,32 @@ export default function SwapPage() {
         <CopyAddress />
       </div>
 
-      {/* Jupiter Terminal Embed */}
+      {/* Raydium Swap Embed */}
       <div className="rounded-2xl bg-surface-light border border-white/5 p-6 mb-12">
         <div className="text-center mb-6">
-          <h2 className="text-xl font-bold text-white mb-2">Swap via Jupiter</h2>
-          <p className="text-sm text-gray-400">Best rates across all Solana DEXes</p>
+          <h2 className="text-xl font-bold text-white mb-2">Swap via Raydium</h2>
+          <p className="text-sm text-gray-400">Solana&apos;s top AMM &mdash; fast swaps, low fees</p>
         </div>
 
-        {/* Jupiter iframe embed */}
         <div className="flex justify-center">
           <iframe
-            src={`https://jup.ag/swap/SOL-${TOKEN.mintAddress}`}
+            src={RAYDIUM_SWAP_URL}
             width="100%"
-            height="600"
-            className="rounded-xl border border-white/10 max-w-md"
-            title="Jupiter Swap"
+            height="650"
+            className="rounded-xl border border-white/10 max-w-lg"
+            title="Raydium Swap"
             allow="clipboard-write"
           />
         </div>
 
         <div className="mt-4 text-center">
           <a
-            href={`https://jup.ag/swap/SOL-${TOKEN.mintAddress}`}
+            href={RAYDIUM_SWAP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-primary hover:text-primary-light underline"
           >
-            Open Jupiter in full screen
+            Open Raydium in full screen
           </a>
         </div>
       </div>
@@ -76,14 +77,14 @@ export default function SwapPage() {
         <div className="grid sm:grid-cols-3 gap-4">
           {[
             {
-              name: "Jupiter",
-              description: "Best aggregated rates",
-              href: `https://jup.ag/swap/SOL-${TOKEN.mintAddress}`,
+              name: "Raydium",
+              description: "Primary liquidity pool",
+              href: RAYDIUM_SWAP_URL,
             },
             {
-              name: "Raydium",
-              description: "Solana's top AMM DEX",
-              href: `https://raydium.io/swap/?inputMint=sol&outputMint=${TOKEN.mintAddress}`,
+              name: "Jupiter",
+              description: "DEX aggregator",
+              href: `https://jup.ag/swap/SOL-${TOKEN.mintAddress}`,
             },
             {
               name: "Birdeye",
