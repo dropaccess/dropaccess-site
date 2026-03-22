@@ -3,7 +3,7 @@ export const TOKEN = {
   symbol: "DROPA",
   decimals: 9,
   totalSupply: "1,000,000,000",
-  mintAddress: "4LeFXFY33qQFz6KoPw54higA8JPKeqc5AemdUzHH1oSS",
+  mintAddress: "EUxtFoBZvYTnV2iuKKuQCz8ZKjXe8BTrGeuvRiCYJLyQ",
   network: "Solana",
 };
 

@@ -5,7 +5,7 @@ import { fromWeb3JsKeypair } from "@metaplex-foundation/umi-web3js-adapters";
 import { Keypair } from "@solana/web3.js";
 import * as fs from "fs";
 
-const MINT_ADDRESS = "4LeFXFY33qQFz6KoPw54higA8JPKeqc5AemdUzHH1oSS";
+const MINT_ADDRESS = "EUxtFoBZvYTnV2iuKKuQCz8ZKjXe8BTrGeuvRiCYJLyQ";
 const METADATA_URI = "https://dropa.dev/token-metadata.json";
 
 async function main() {
@@ -15,7 +15,6 @@ async function main() {
 
   console.log("Wallet:", web3Keypair.publicKey.toBase58());
   console.log("Mint:", MINT_ADDRESS);
-  console.log("Metadata URI:", METADATA_URI);
 
   const umi = createUmi("https://api.mainnet-beta.solana.com");
   const umiKeypair = fromWeb3JsKeypair(web3Keypair);
@@ -24,7 +23,7 @@ async function main() {
 
   console.log("Creating metadata account...");
 
-  const tx = await createMetadataAccountV3(umi, {
+  await createMetadataAccountV3(umi, {
     mint: publicKey(MINT_ADDRESS),
     mintAuthority: signer,
     payer: signer,
@@ -42,15 +41,10 @@ async function main() {
     collectionDetails: null,
   }).sendAndConfirm(umi);
 
-  console.log("");
-  console.log("=== TOKEN METADATA ADDED ===");
+  console.log("=== METADATA ADDED SUCCESSFULLY ===");
   console.log("Name: DropAccess");
   console.log("Symbol: DROPA");
   console.log("Logo: https://dropa.dev/images/logo.png");
-  console.log("Metadata: https://dropa.dev/token-metadata.json");
-  console.log(`SolScan: https://solscan.io/token/${MINT_ADDRESS}`);
-  console.log("");
-  console.log("Your token logo will now show in Phantom, Jupiter, SolScan, etc.");
 }
 
 main().catch(console.error);
